@@ -1,6 +1,6 @@
 {
   "name": "clock-time-picker-react",
-  "version": "0.2.2",
+  "version": "0.2.1",
   "description": "A dependency-free, clock-face time picker for React and Next.js. Works in JS and TS, no Tailwind required.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -47,6 +47,14 @@
     "24-hour"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sushobhan-max/clock-time-picker-react.git"
+  },
+  "homepage": "https://github.com/Sushobhan-max/clock-time-picker-react#readme",
+  "bugs": {
+    "url": "https://github.com/Sushobhan-max/clock-time-picker-react/issues"
+  },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

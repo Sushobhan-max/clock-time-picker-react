@@ -72,7 +72,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0;
   padding: 20px 24px;
   background: var(--ctp-header-bg);
   border-radius: var(--ctp-radius) var(--ctp-radius) 0 0;
@@ -114,10 +114,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  margin-left: 12px;
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
-  border-radius: 6px;
-  overflow: hidden;
+  margin-left: 0;
 }
 
 /* Inactive AM/PM: transparent bg, muted white text */
@@ -125,7 +122,7 @@
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 0 10px;
   color: rgba(255, 255, 255, 0.55);
   background: transparent;
   border: none;
@@ -134,10 +131,10 @@
   letter-spacing: 0.03em;
 }
 
-/* Active AM/PM: solid white background with accent text — unmistakably selected */
+/* Active AM/PM: full white text, no background */
 .ctp-ampm-btn--active {
-  background: #ffffff;
-  color: var(--ctp-accent);
+  background: transparent;
+  color: #ffffff;
 }
 
 .ctp-subtitle {
@@ -151,7 +148,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 24px 24px;
+  padding: 0 24px 10px;
 }
 
 .ctp-face {
