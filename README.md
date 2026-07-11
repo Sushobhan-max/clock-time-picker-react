@@ -10,7 +10,7 @@ Works with: React, Next.js (App Router + Pages Router), Vite, Create React App â
 
 ---
 
-![Preview](https://raw.githubusercontent.com/Sushobhan-max/clock-time-picker-react/main/assets/preview.png)
+![Preview](https://res.cloudinary.com/deuoq0u1f/image/upload/v1783801410/Screenshot_from_2026-07-11_22-54-37_nvhieo.png)
 
 ---
 
