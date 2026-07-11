@@ -1,6 +1,6 @@
 {
   "name": "clock-time-picker-react",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A dependency-free, clock-face time picker for React and Next.js. Works in JS and TS, no Tailwind required.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
