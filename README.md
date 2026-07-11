@@ -10,6 +10,10 @@ Works with: React, Next.js (App Router + Pages Router), Vite, Create React App �
 
 ---
 
+![Preview](https://raw.githubusercontent.com/Sushobhan-max/clock-time-picker-react/main/assets/preview.png)
+
+---
+
 ## Features
 
 - 🕐 Clock-face UI — just like React Native's time picker, now for the web
