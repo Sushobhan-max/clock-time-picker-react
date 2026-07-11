@@ -45,3 +45,4 @@ Thumbs.db
 # misc
 .cache/
 .turbo/
+*.tgz
