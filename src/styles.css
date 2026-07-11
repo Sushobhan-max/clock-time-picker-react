@@ -1,0 +1,221 @@
+/* ClockTimePicker default theme.
+   All colors are exposed as CSS variables so consumers can override them
+   without fighting specificity — just redeclare the variables on :root
+   or on a wrapping element. Every selector below is a single class,
+   so a consumer's own stylesheet (loaded after this one) or a `className`
+   override will win normally; add !important on their side if needed. */
+
+:root {
+  --ctp-accent: #4f46e5;
+  --ctp-accent-active: #4338ca;
+  --ctp-face-bg: #eef0f8;
+  --ctp-header-bg: #4f46e5;
+  --ctp-overlay-bg: rgba(0, 0, 0, 0.55);
+  --ctp-text-muted: #6b7280;
+  --ctp-border: #e5e7eb;
+  --ctp-radius: 12px;
+  --ctp-font: inherit;
+}
+
+.ctp-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #374151;
+  font-family: var(--ctp-font);
+}
+
+.ctp-input {
+  height: 44px;
+  margin-top: 4px;
+  background: #fff;
+  padding: 0 16px;
+  border: 1px solid var(--ctp-border);
+  border-radius: var(--ctp-radius);
+  color: #000;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  font-family: var(--ctp-font);
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.ctp-input::placeholder {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.ctp-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ctp-overlay-bg);
+}
+
+.ctp-popup {
+  background: #fff;
+  border-radius: var(--ctp-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 370px;
+  position: relative;
+  font-family: var(--ctp-font);
+}
+
+/* Header uses accent as background — white text on color */
+.ctp-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 24px;
+  background: var(--ctp-header-bg);
+  border-radius: var(--ctp-radius) var(--ctp-radius) 0 0;
+}
+
+.ctp-time-display {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+/* Inactive segment: white but semi-transparent — clearly readable but dimmer */
+.ctp-time-segment {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 48px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: color 0.15s ease, background 0.15s ease;
+  line-height: 1;
+}
+
+/* Active segment: full white + subtle dark background pill — clearly selected */
+.ctp-time-segment--active {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.ctp-time-colon {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* AM/PM column */
+.ctp-ampm {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-left: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Inactive AM/PM: transparent bg, muted white text */
+.ctp-ampm-btn {
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: rgba(255, 255, 255, 0.55);
+  background: transparent;
+  border: none;
+  font-family: var(--ctp-font);
+  transition: background 0.15s ease, color 0.15s ease;
+  letter-spacing: 0.03em;
+}
+
+/* Active AM/PM: solid white background with accent text — unmistakably selected */
+.ctp-ampm-btn--active {
+  background: #ffffff;
+  color: var(--ctp-accent);
+}
+
+.ctp-subtitle {
+  text-align: center;
+  margin: 12px 0;
+  font-size: 13px;
+  color: var(--ctp-text-muted);
+}
+
+.ctp-face-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px 24px;
+}
+
+.ctp-face {
+  cursor: pointer;
+  user-select: none;
+}
+
+.ctp-face-bg {
+  fill: var(--ctp-face-bg);
+}
+
+.ctp-tick {
+  cursor: pointer;
+}
+
+.ctp-tick-highlight {
+  fill: var(--ctp-accent);
+  stroke: var(--ctp-accent);
+  stroke-width: 3;
+}
+
+.ctp-tick-text {
+  fill: var(--ctp-accent);
+}
+
+.ctp-tick-text--active {
+  fill: #fff;
+}
+
+.ctp-center-dot {
+  fill: var(--ctp-accent);
+}
+
+.ctp-hand {
+  stroke: var(--ctp-accent);
+  stroke-width: 2;
+}
+
+.ctp-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+  padding: 0 24px 24px;
+  box-sizing: border-box;
+}
+
+.ctp-btn {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-family: var(--ctp-font);
+  border: 1px solid transparent;
+}
+
+.ctp-btn--ghost {
+  color: var(--ctp-accent);
+  border-color: var(--ctp-accent);
+  background: transparent;
+  margin-right: 8px;
+}
+
+.ctp-btn--solid {
+  background: var(--ctp-accent);
+  color: #fff;
+}

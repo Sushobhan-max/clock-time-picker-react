@@ -1,0 +1,65 @@
+{
+  "name": "clock-time-picker-react",
+  "version": "0.1.1",
+  "description": "A dependency-free, clock-face time picker for React and Next.js. Works in JS and TS, no Tailwind required.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./styles.css": "./dist/index.css",
+    "./dist/index.css": "./dist/index.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "next.js",
+    "time-picker",
+    "clock",
+    "clock-picker",
+    "clock-time-picker",
+    "react-time-picker",
+    "react-clock",
+    "analog-clock",
+    "time-input",
+    "react-native-style",
+    "material-time-picker",
+    "date-picker",
+    "typescript",
+    "vite",
+    "form",
+    "am-pm",
+    "12-hour",
+    "24-hour"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "react-time-picker": "^8.0.3"
+  }
+}
